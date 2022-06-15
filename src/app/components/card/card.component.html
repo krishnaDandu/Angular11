@@ -1,0 +1,25 @@
+<p>card works!</p>
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2" *ngFor="let product of products.slice(0, showItems); i as index;">
+        <div class="card mb-2 shadow-sm">
+          <img class="card-img-top" [src]="product.image" alt="product image" />
+          <div class="card-body">
+            <p class="card-text">
+              {{product.name}}
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-primary" (click)="Showmore(showItems)">
+           {{showText}}...
+          </button>
+        </div>
+      </div>
+  </div>
+  
